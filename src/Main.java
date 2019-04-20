@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+        
         LinkedList list = new LinkedList();
 
         list.isEmpty(list);
@@ -16,5 +17,5 @@ public class Main {
         list.deleteAt(1);
 
         list.show();
-    }
-}
+    }//End of main method
+}//End of Main class

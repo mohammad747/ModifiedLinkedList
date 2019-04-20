@@ -1,55 +1,55 @@
 class LinkedList {
     private Node head;
 
-    void isEmpty(LinkedList list){
-        if (head==null)
+    void isEmpty(LinkedList list) {
+        //If we don't have the head node the list is empty
+        if (head == null)
             System.out.println("The list is empty");
         else
-        System.out.println("The list is not empty");
-    }
+            System.out.println("The list is not empty");
+    }//End of isEmpty
 
-    void insert(int data){
+    void insert(int data) {
+        //Create a new node
         Node node = new Node();
         node.data = data;
         node.next = null;
-
-        if (head==null){
+        //If we don't have any nodes before
+        if (head == null) {
             head = node;
-        }
-        else {
+          //We already have a list so we have to add it to the tail of linkedList
+        } else {
             Node n = head;
-
-            while (n.next!=null){
+            //Traverse to the last node
+            while (n.next != null) {
                 n = n.next;
             }
             n.next = node;
         }
-    }
-
-    void show(){
+    }//End of insert
+    //Display the list
+    void show() {
         Node node = head;
-
-        while (node.next!=null){
+        //Until the list is finished
+        while (node.next != null) {
 
             System.out.print(node.data + " ");
+            //Go next node
             node = node.next;
         }
+        //Display the last node which is at the tail of our linkedList
         System.out.println(node.data);
-    }
+    }//End of show
 
-
-    void deleteAt(int index)
-    {
-        if(index==0)
-        {
+    //Delete the node at the specific index
+    void deleteAt(int index) {
+        //Delete the first node
+        if (index == 0) {
             head = head.next;
-        }
-        else
-        {
+        } else {
             Node n = head;
             Node n1 = null;
-            for(int i=0;i<index-1;i++)
-            {
+            for (int i = 0; i < index - 1; i++) {
                 n = n.next;
             }
             n1 = n.next;
@@ -57,7 +57,7 @@ class LinkedList {
             //System.out.println("n1 " + n1.data);
             n1 = null;
         }
-    }
+    }//End of deleteAt
 
 
-}
+}//End of class

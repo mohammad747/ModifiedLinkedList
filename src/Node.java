@@ -3,4 +3,4 @@ class Node {
     int data;
     //Next Node obj(the pointer to the next node on c++)
     Node next;
-}
+}//End of class
