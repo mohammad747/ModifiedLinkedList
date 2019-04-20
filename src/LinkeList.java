@@ -27,6 +27,7 @@ public class LinkeList {
             System.out.print(node.data + " ");
             node = node.next;
         }
+        System.out.println(node.data);
     }
 
 
