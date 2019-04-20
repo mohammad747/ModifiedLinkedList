@@ -1,7 +1,14 @@
-public class LinkeList {
-    Node head;
+class LinkedList {
+    private Node head;
 
-    public void insert(int data){
+    void isEmpty(LinkedList list){
+        if (head==null)
+            System.out.println("The list is empty");
+        else
+        System.out.println("The list is not empty");
+    }
+
+    void insert(int data){
         Node node = new Node();
         node.data = data;
         node.next = null;
@@ -19,7 +26,7 @@ public class LinkeList {
         }
     }
 
-    public void show(){
+    void show(){
         Node node = head;
 
         while (node.next!=null){
@@ -31,7 +38,7 @@ public class LinkeList {
     }
 
 
-    public void deleteAt(int index)
+    void deleteAt(int index)
     {
         if(index==0)
         {
